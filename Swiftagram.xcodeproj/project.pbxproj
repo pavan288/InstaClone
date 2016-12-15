@@ -13,6 +13,7 @@
 		27034B771E02DD0100660689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27034B761E02DD0100660689 /* Assets.xcassets */; };
 		27034B7A1E02DD0100660689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27034B781E02DD0100660689 /* LaunchScreen.storyboard */; };
 		27034B821E02E96000660689 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27034B811E02E96000660689 /* GoogleService-Info.plist */; };
+		27034B841E030F5F00660689 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27034B831E030F5F00660689 /* RegisterViewController.swift */; };
 		49BE5A6C250FBE62C2524064 /* Pods_Swiftagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672D04D5DC3B576114F7E482 /* Pods_Swiftagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		27034B791E02DD0100660689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27034B7B1E02DD0100660689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27034B811E02E96000660689 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27034B831E030F5F00660689 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		672D04D5DC3B576114F7E482 /* Pods_Swiftagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		838FACC5EA8D7B00EEEE04D1 /* Pods-Swiftagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram.release.xcconfig"; sourceTree = "<group>"; };
 		B057EC61AE8B84F5AA5106C3 /* Pods-Swiftagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				27034B6F1E02DD0100660689 /* AppDelegate.swift */,
 				27034B711E02DD0100660689 /* ViewController.swift */,
+				27034B831E030F5F00660689 /* RegisterViewController.swift */,
 				27034B731E02DD0100660689 /* Main.storyboard */,
 				27034B761E02DD0100660689 /* Assets.xcassets */,
 				27034B781E02DD0100660689 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27034B841E030F5F00660689 /* RegisterViewController.swift in Sources */,
 				27034B721E02DD0100660689 /* ViewController.swift in Sources */,
 				27034B701E02DD0100660689 /* AppDelegate.swift in Sources */,
 			);
@@ -369,6 +373,7 @@
 				27034B801E02DD0100660689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
