@@ -12,6 +12,8 @@
 		27034B751E02DD0100660689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27034B731E02DD0100660689 /* Main.storyboard */; };
 		27034B771E02DD0100660689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27034B761E02DD0100660689 /* Assets.xcassets */; };
 		27034B7A1E02DD0100660689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27034B781E02DD0100660689 /* LaunchScreen.storyboard */; };
+		27034B821E02E96000660689 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27034B811E02E96000660689 /* GoogleService-Info.plist */; };
+		49BE5A6C250FBE62C2524064 /* Pods_Swiftagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672D04D5DC3B576114F7E482 /* Pods_Swiftagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		27034B761E02DD0100660689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27034B791E02DD0100660689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27034B7B1E02DD0100660689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27034B811E02E96000660689 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		672D04D5DC3B576114F7E482 /* Pods_Swiftagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		838FACC5EA8D7B00EEEE04D1 /* Pods-Swiftagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram.release.xcconfig"; sourceTree = "<group>"; };
+		B057EC61AE8B84F5AA5106C3 /* Pods-Swiftagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BE5A6C250FBE62C2524064 /* Pods_Swiftagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				27034B6E1E02DD0000660689 /* Swiftagram */,
 				27034B6D1E02DD0000660689 /* Products */,
+				B47BB594FC5490BB961DDB83 /* Pods */,
+				FF4D99C09B2DEC8FEC6C3399 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				27034B761E02DD0100660689 /* Assets.xcassets */,
 				27034B781E02DD0100660689 /* LaunchScreen.storyboard */,
 				27034B7B1E02DD0100660689 /* Info.plist */,
+				27034B811E02E96000660689 /* GoogleService-Info.plist */,
 			);
 			path = Swiftagram;
+			sourceTree = "<group>";
+		};
+		B47BB594FC5490BB961DDB83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B057EC61AE8B84F5AA5106C3 /* Pods-Swiftagram.debug.xcconfig */,
+				838FACC5EA8D7B00EEEE04D1 /* Pods-Swiftagram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF4D99C09B2DEC8FEC6C3399 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				672D04D5DC3B576114F7E482 /* Pods_Swiftagram.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27034B7E1E02DD0100660689 /* Build configuration list for PBXNativeTarget "Swiftagram" */;
 			buildPhases = (
+				E48FE91332C864C17564C39D /* [CP] Check Pods Manifest.lock */,
 				27034B681E02DD0000660689 /* Sources */,
 				27034B691E02DD0000660689 /* Frameworks */,
 				27034B6A1E02DD0000660689 /* Resources */,
+				30C8C54CA91299BBB4E766F5 /* [CP] Embed Pods Frameworks */,
+				1851450E6EFA9972D2535F8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				27034B7A1E02DD0100660689 /* LaunchScreen.storyboard in Resources */,
+				27034B821E02E96000660689 /* GoogleService-Info.plist in Resources */,
 				27034B771E02DD0100660689 /* Assets.xcassets in Resources */,
 				27034B751E02DD0100660689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1851450E6EFA9972D2535F8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C8C54CA91299BBB4E766F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiftagram/Pods-Swiftagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E48FE91332C864C17564C39D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27034B681E02DD0000660689 /* Sources */ = {
@@ -249,6 +328,7 @@
 		};
 		27034B7F1E02DD0100660689 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B057EC61AE8B84F5AA5106C3 /* Pods-Swiftagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swiftagram/Info.plist;
@@ -260,6 +340,7 @@
 		};
 		27034B801E02DD0100660689 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838FACC5EA8D7B00EEEE04D1 /* Pods-Swiftagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Swiftagram/Info.plist;
