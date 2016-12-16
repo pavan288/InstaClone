@@ -38,10 +38,9 @@ class ViewController: UIViewController {
                 self.presentViewController(alert, animated: true, completion: nil)
             }else{
                 // logged in
-                let alert = UIAlertController(title: "Success", message: "You are logged in", preferredStyle: .Alert)
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("PostvC")
+                self.presentViewController(vc!, animated: true, completion: nil)
                 
-                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
             }
         })
     }
