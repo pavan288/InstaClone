@@ -232,7 +232,13 @@
                             <constraint firstItem="EKu-We-b0u" firstAttribute="centerX" secondItem="PTL-ls-PlC" secondAttribute="centerX" id="ww6-aU-mRP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Post" id="iiO-Rm-PzT"/>
+                    <navigationItem key="navigationItem" title="Post" id="iiO-Rm-PzT">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Kra-C7-8dK">
+                            <connections>
+                                <segue destination="GbI-vj-g28" kind="show" id="PgN-s1-HAU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="VjN-Kf-BK2" id="Bxg-Zn-Lpq"/>
                         <outlet property="previewImageView" destination="euE-QH-JDx" id="iEm-bf-O7T"/>
@@ -242,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPR-og-UuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="343"/>
+            <point key="canvasLocation" x="1660" y="383"/>
         </scene>
         <!--Swiftagram-->
         <scene sceneID="vox-cs-Zdl">
@@ -256,12 +262,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="471" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-qC-ITd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="471" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-qC-ITd">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="qaa-2G-ZhL"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="471" id="Q9e-Bc-Lwr" customClass="PostTableViewCell" customModule="Swiftagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="471"/>
@@ -273,39 +276,39 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! This is a title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFw-w4-p9K">
                                                     <rect key="frame" x="86" y="0.0" width="443" height="56"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="443" id="LxZ-LY-1Qm"/>
-                                                        <constraint firstAttribute="height" constant="56" id="WqG-gf-zSe"/>
+                                                        <constraint firstAttribute="height" constant="56" id="Pgc-TE-RCg"/>
+                                                        <constraint firstAttribute="width" constant="443" id="vGl-pd-jyo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4od-rC-7AW">
-                                                    <rect key="frame" x="149" y="64" width="300" height="300"/>
+                                                    <rect key="frame" x="150" y="64" width="300" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="Dd8-xK-Ukx"/>
-                                                        <constraint firstAttribute="width" constant="300" id="dtP-7X-nIU"/>
+                                                        <constraint firstAttribute="height" constant="300" id="4qX-rf-q0S"/>
+                                                        <constraint firstAttribute="width" constant="300" id="yK3-gO-1zf"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hi this is the content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CYy-yf-RHV">
-                                                    <rect key="frame" x="149" y="386" width="300" height="67"/>
+                                                    <rect key="frame" x="150" y="386" width="300" height="67"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="67" id="ikw-7H-Mb6"/>
-                                                        <constraint firstAttribute="width" constant="300" id="pwR-0v-2nX"/>
+                                                        <constraint firstAttribute="width" constant="300" id="8Rh-SR-SvD"/>
+                                                        <constraint firstAttribute="height" constant="67" id="c6S-sN-pcn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CYy-yf-RHV" firstAttribute="top" secondItem="4od-rC-7AW" secondAttribute="bottom" constant="22" id="7ng-NI-ka6"/>
-                                                <constraint firstItem="CYy-yf-RHV" firstAttribute="centerX" secondItem="yI8-U1-Mr5" secondAttribute="centerX" constant="-1" id="IfW-zi-JQx"/>
-                                                <constraint firstItem="zFw-w4-p9K" firstAttribute="leading" secondItem="yI8-U1-Mr5" secondAttribute="leadingMargin" constant="78" id="JSw-ap-dYT"/>
-                                                <constraint firstItem="zFw-w4-p9K" firstAttribute="top" secondItem="yI8-U1-Mr5" secondAttribute="topMargin" constant="-8" id="NHY-WC-VEy"/>
-                                                <constraint firstItem="4od-rC-7AW" firstAttribute="centerX" secondItem="yI8-U1-Mr5" secondAttribute="centerX" constant="-1" id="aVp-hf-BOQ"/>
-                                                <constraint firstItem="4od-rC-7AW" firstAttribute="top" secondItem="zFw-w4-p9K" secondAttribute="bottom" constant="8" id="iUh-h3-VE6"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zFw-w4-p9K" secondAttribute="trailing" constant="63" id="vNp-ao-deW"/>
+                                                <constraint firstItem="4od-rC-7AW" firstAttribute="centerX" secondItem="yI8-U1-Mr5" secondAttribute="centerX" id="3QK-ot-571"/>
+                                                <constraint firstItem="zFw-w4-p9K" firstAttribute="leading" secondItem="yI8-U1-Mr5" secondAttribute="leadingMargin" constant="78" id="NXH-q7-DvH"/>
+                                                <constraint firstItem="zFw-w4-p9K" firstAttribute="top" secondItem="yI8-U1-Mr5" secondAttribute="topMargin" constant="-8" id="RYb-qK-03S"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zFw-w4-p9K" secondAttribute="trailing" constant="63" id="UWU-kE-w9Z"/>
+                                                <constraint firstItem="4od-rC-7AW" firstAttribute="top" secondItem="zFw-w4-p9K" secondAttribute="bottom" constant="8" id="fwK-fN-ruU"/>
+                                                <constraint firstItem="CYy-yf-RHV" firstAttribute="top" secondItem="4od-rC-7AW" secondAttribute="bottom" constant="22" id="gMj-Zc-jFv"/>
+                                                <constraint firstItem="CYy-yf-RHV" firstAttribute="centerX" secondItem="yI8-U1-Mr5" secondAttribute="centerX" id="sr9-Xt-HyS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -315,22 +318,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="eJd-S2-f0W" id="0dx-Ku-LiZ"/>
-                                    <outlet property="delegate" destination="eJd-S2-f0W" id="7nF-hK-fkP"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hLb-qC-ITd" firstAttribute="top" secondItem="1QW-NI-3Wo" secondAttribute="bottom" id="0z3-3O-iJh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hLb-qC-ITd" secondAttribute="trailing" constant="-20" id="DPJ-ot-cyL"/>
-                            <constraint firstItem="97P-sY-e2B" firstAttribute="top" secondItem="hLb-qC-ITd" secondAttribute="bottom" id="Z2p-Bl-BtJ"/>
-                            <constraint firstItem="hLb-qC-ITd" firstAttribute="centerX" secondItem="Fok-Yw-Elh" secondAttribute="centerX" id="oQ8-Re-3EN"/>
-                            <constraint firstItem="hLb-qC-ITd" firstAttribute="leading" secondItem="Fok-Yw-Elh" secondAttribute="leadingMargin" constant="-20" id="osx-L1-Tc0"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Swiftagram" id="jg0-0e-cjK"/>
+                    <navigationItem key="navigationItem" title="Swiftagram" id="jg0-0e-cjK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="mB5-vm-Veu">
+                            <connections>
+                                <segue destination="AIt-6Q-AUe" kind="show" id="XJy-E8-2X4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="postsTableView" destination="hLb-qC-ITd" id="A8L-7t-5cF"/>
                     </connections>
@@ -360,7 +358,7 @@
         <!--Navigation Controller-->
         <scene sceneID="M8c-Vd-0f4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GbI-vj-g28" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="GbI-vj-g28" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZRE-Nh-E0P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

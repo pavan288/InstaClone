@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 
 class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -17,7 +18,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.postsTableView.dataSource = self
+        self.postsTableView.delegate = self
+        
+        loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,7 +31,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func loadData(){
-        FIRDatabase.database().reference().child("posts").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        FIRDatabase.database().reference().child("posts").observeSingleEventOfType(.Value, withBlock: { snapshot in
             if let postsDictionary = snapshot.value as? [String: AnyObject]{
                 for post in postsDictionary{
                     self.posts.addObject(post.1)
@@ -45,7 +50,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,12 +61,38 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PostTableViewCell
-
-        // Configure the cell...
-        let post = self.posts[indexPath.row]
-        cell.titleLabel.text = post["title"]
         
-
+        // Configure the cell...
+        let post = self.posts[indexPath.row] as! [String: AnyObject]
+        print("Post:\(posts)")
+        cell.titleLabel.text = post["title"] as? String
+        cell.contentTextView.text = post["content"] as? String
+        
+        if let imageName = post["image"] as? String{
+        let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
+        imageRef.dataWithMaxSize(25 * 1024 * 1024, completion: { (data, error) -> Void in
+            if error==nil{
+                //successful
+                let image = UIImage(data: data!)
+                cell.postImageView.image = image
+                
+            }else{
+                //error occured
+                print("Error downloading image:\(error?.localizedDescription)")
+            }
+        })
+            cell.titleLabel.alpha = 0
+            cell.contentTextView.alpha = 0
+            cell.postImageView.alpha = 0
+            
+            UIView.animateWithDuration(0.4, animations:{
+                cell.titleLabel.alpha = 1
+                cell.contentTextView.alpha = 1
+                cell.postImageView.alpha = 1
+            })
+        }
+        
+       
         return cell
     }
     
