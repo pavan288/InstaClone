@@ -25,14 +25,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   /* override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
         if FIRAuth.auth()?.currentUser != nil{
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC")
             self.presentViewController(vc!, animated: false, completion: nil)
         }
-    }*/
+    }
  
 
     @IBAction func signInTapped(sender: AnyObject) {

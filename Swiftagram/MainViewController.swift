@@ -64,7 +64,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         // Configure the cell...
         let post = self.posts[indexPath.row] as! [String: AnyObject]
-        print("Post:\(posts)")
+     //   print("Post:\(posts)")
         cell.titleLabel.text = post["title"] as? String
         cell.contentTextView.text = post["content"] as? String
         
